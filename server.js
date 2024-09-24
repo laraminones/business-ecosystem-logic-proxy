@@ -252,13 +252,13 @@ app.get('/auth/' + config.oauth2.provider + '/callback', passport.authenticate(c
 
     } else if (config.externalPortal == null || config.externalPortal == ''){
         // Using local new GUI
-        res.redirect('/dashboard?token=local');
+        res.redirect('/search?token=local');
     } else {
         // Using an external portal
         res.header('Access-Control-Allow-Origin', config.externalPortal)
         res.header("Access-Control-Allow-Credentials", true);
 
-        res.redirect(`${config.externalPortal}/dashboard?token=` + req.user.accessToken);
+        res.redirect(`${config.externalPortal}/search?token=` + req.user.accessToken);
     }
 });
 
