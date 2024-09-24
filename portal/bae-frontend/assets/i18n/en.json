@@ -4,7 +4,7 @@
     "DASHBOARD": {
         "_title": "YUMKET is out! See what's new",
         "_header": "YUMKET: Cloud & Edge Services you can Trust",
-        "_subheader": "Welcome to the first open distributed marketplace ecosystem for cloud, edge & AI services in Europe.",
+        "_subheader": "Welcome to the first open distributed marketplace ecosystem for cloud, edge & AI services in Europe",
         "_new": "New",
         "_learn_more": "Learn more",
         "_video": "Watch video",
@@ -14,7 +14,8 @@
         "_smart_ports": "Smart ports",
         "_smart_cities": "Smart cities",
         "_search_ph": "Search Cloud Services, Edge Services, Providers...",
-        "_search": "Search"
+        "_search": "Search",
+        "_not_found": "No offers found"
     },
     "FEATURED": {
         "_title": "Featured offerings",
@@ -75,30 +76,34 @@
             "_search_title": "Search and Explore",
             "_search_desc": "Use our intuitive search to find the services that match your digital transformation needs.",
             "_compare_title": "Compare and Decide",
-            "_compare_desc": "Evaluate services based on features, compliance and reviews to make informed choices.",
+            "_compare_desc": "Evaluate services based on features, EU compliance and reviews to make informed choices.",
             "_seamless_title": "Seamless Integration",
             "_seamless_desc": "Follow our easy process to integrate and deploy your chosen services swiftly.",
             "_join": "Join as customer",
             "_explore": "Explore the catalogue",
-            "_contact": "Contact us"
+            "_contact": "Contact us",
+            "_description": "The marketplace is actually free to browse. Take a look at the catalogue contents, search for the services you need, verify the different offerings, get in touch with the service providers to better understand the proposal and acquire the desired service."
         },
         "PROVIDERS": {
             "_title": "For providers",
             "_subtitle": "Connect and Grow",
             "_register_title": "Register Your Service",
-            "_register_desc": "Sign up and submit your service for validation, ensuring compliance and quality.",
+            "_register_desc": "Sign up and submit your european service for validation, ensuring compliance and quality.",
             "_verified_title": "Get verified",
             "_verified_desc": "Our team will quickly verify your offerings to ensure they meet Distributed Open Marketplace standards.",
             "_reach_title": "Reach Europe",
             "_reach_desc": "Once verified, your services will be accessible to a wide European audience, ready to grow your business.",
             "_join": "Join as provider",
             "_onboard": "Onboard the marketplace",
-            "_contact": "Contact us"
+            "_contact": "Contact us",
+            "_description_start": "Qualify you company through the reference",
+            "_link": "Company Onboarding process",
+            "_description_end": "and then start describing your offerings through the Offering qualification process and star being visible on the market inside this trustable catalogue."
         }
     },
     "EXPLORE": {
         "_title": "Explore the Distributed Open Marketplace Project",
-        "_subtitle": "Whether you're seeking in-depth reports, latest updates or upcoming events, everything ou need to know is just a click away.",
+        "_subtitle": "Whether you're seeking in-depth reports, latest updates or upcoming events, everything ou need to know is just a click away",
         "_events_title": "Events and Webinars",
         "_events_desc": "Join us at our next event or webinar to connect with fellow innovators, learn from industry leaders and discover new opportunities within the 'DOME' Project's ecosystem.",
         "_updates_title": "Latest Updates and News",
@@ -153,6 +158,7 @@
     "FOOTER": {
         "_about": "About",
         "_privacy": "Privacy Policy",
+        "_cookies": "Cookies Policy",
         "_licensing": "Terms of Use",
         "_contact": "Contact",
         "_rights": "All Rights Reserved"
@@ -254,7 +260,29 @@
         "_mybills": "My billing addresses",
         "_user_id": "User id",
         "_no_orders": "No orders found",
-        "_organization": "Organization"
+        "_organization": "Organization",
+        "_medium_type": "Medium type",
+        "_preferred": "Preferred",
+        "_no_mediums": "There's no contact medium information.",
+        "_contact_info": "Contact information",
+        "_info": "Info",
+        "_actions": "Actions",
+        "_add_new_contact": "Add a new contact medium",
+        "_postalAddress": "Postal address",
+        "_phone": "Phone number",
+        "_phone_type": "Phone Type",
+        "_action": "Actions",
+        "_state": "State / Province",
+        "_post_code": "ZIP / Postal Code",
+        "_street": "Street Address",
+        "_edit": "Edit contact medium",
+        "_delete": "Yes, delete",
+        "_confirm_delete": "Are you sure about deleting the following billing address?",
+        "_cancel": "No, cancel",
+        "_invalid_phone": "Phonenumber is invalid!",
+        "_invalid_email": "Email is invalid!",
+        "_save": "Save",
+        "_success": "Updated successfully"
     },
     "PRODUCT_INVENTORY":{
         "_loading": "Loading...",
@@ -461,7 +489,10 @@
         "_finish": "Finish",
         "_summary": "Product's summary",
         "_update_prod": "Update product",
-        "_verify": "Verify Certificates"
+        "_verify": "Verify Certificates",
+        "_how_to_verify": "How to get a valid VC of the certificate?",
+        "_verify_text": "To get a valid VC of the certificate you can access the ",
+        "_dome_trust": "DOME Trust Service Provider for Certification"
     },
     "CREATE_RES_SPEC": {
         "_back": "Back",
