@@ -28,17 +28,17 @@ config.portalPrefix = '';
 config.logInPath = '/login';
 config.logOutPath = '/logOut';
 config.sessionSecret = 'keyboard cat';
-config.theme = 'bae-dome-theme';
+config.theme = '';
 
 // OAuth2 configuration
 //'server': 'http://34.213.26.168:8000/',
 config.oauth2 = {
 	provider: 'fiware',
 	server: 'http://idm.docker:3000',
-	clientID: '19dd858c-328c-4642-93ab-da45e4d253ae',
-	clientSecret: '09ffe023-a242-46a3-bd83-9277d36e2379',
+	clientID: 'b7956b46-ec03-4dbd-b62f-c3f72f338e8b',
+	clientSecret: 'c09d61fb-5c06-41aa-9dd2-5d8c319fdaf9',
 	callbackURL: 'http://proxy.docker:8004/auth/fiware/callback',
-	oidc: true,
+	oidc: false,
 	oidcScopes: "openid",
 	oidcDiscoveryURI: null,
 	oidcTokenEndpointAuthMethod: "client_secret_basic",
@@ -85,7 +85,6 @@ config.oauth2 = {
 config.siop = {
 	enabled: process.env.BAE_LP_SIOP_ENABLED === 'true',
 	provider: 'vc',
-    isRedirection: process.env.BAE_LP_SIOP_IS_REDIRECTION === 'true',
 	pollPath: '/poll',
     pollCertPath: '/cert/poll',
 	clientID: process.env.BAE_LP_SIOP_CLIENT_ID || 'some_id',
@@ -97,8 +96,7 @@ config.siop = {
 	allowedRoles: process.env.BAE_LP_SIOP_ALLOWED_ROLES ? process.env.BAE_LP_SIOP_ALLOWED_ROLES.split(',') : {
 		customer: 'customer',
 		seller: 'seller'
-	},
-    operators: process.env.BAE_LP_SIOP_OPERATORS ? process.env.BAE_LP_SIOP_OPERATORS.split(',') : []
+	}
 };
 
 config.extLogin = false;
@@ -110,7 +108,19 @@ config.allowLocalEORI = false;
 
 config.editParty = true;
 
+config.knowledgeUrl = ''
+config.knowledgeUrl = process.env.BAE_LP_KNOWLEDGE_BASE_URL || config.knowledgeUrl;
+
+config.ticketingUrl = ''
+config.ticketingUrl = process.env.BAE_LP_TICKETING_URL || config.ticketingUrl;
+
 config.domeTrust = process.env.BAE_LP_DOME_TRUST;
+
+config.domeAbout = process.env.BAE_LP_DOME_ABOUT;
+
+config.domeRegister = process.env.BAE_LP_DOME_REGISTER;
+
+config.domePublish = process.env.BAE_LP_DOME_PUBLISH;
 
 // Customer Role Required to buy items
 config.customerRoleRequired = false;
@@ -164,17 +174,16 @@ config.endpoints = {
     },
     serviceInventory: {
         path: 'serviceInventory',
-        //host: 'charging.docker',
-        host: 'bae-marketplace-biz-ecosystem-charging-backend.marketplace.svc.cluster.local',
-        port: '8006',
+        host: 'host.docker.internal',
+        port: '8640',
         appSsl: false
     },
     resourceInventory: {
         path: 'resourceInventory',
-        //host: 'host.docker.internal',
-        //port: '8641',
-        host: 'tmforum-tm-forum-api-resource-inventory',
-        port: '8080',
+        host: 'host.docker.internal',
+        port: '8641',
+        //host: 'tmforum-tm-forum-api-resource-inventory',
+        //port: '8080',
         appSsl: false
     },
     charging: {
@@ -240,7 +249,7 @@ config.revenueModel = 30;
 config.taxRate = 20;
 
 // Billing Account owner role
-config.billingAccountOwnerRole = 'owner';
+config.billingAccountOwnerRole = 'bill receiver';
 
 // list of paths that will not check authentication/authorization
 // example: ['/public/*', '/static/css/']
@@ -556,8 +565,8 @@ if (!!process.env.BAE_LP_LEGACY_GUI) {
 }
 
 // External Portal config
-//config.externalPortal = 'http://localhost:4200';
-config.externalPortal = '';
+config.externalPortal = 'http://localhost:4200';
+//config.externalPortal = '';
 config.externalPortal = process.env.BAE_LP_EXTERNAL_PORTAL || config.externalPortal;
 
 // Chatbot
@@ -577,5 +586,5 @@ config.knowledgeUrl = process.env.BAE_LP_KNOWLEDGE_BASE_URL || config.knowledgeU
 config.ticketingUrl = ''
 config.ticketingUrl = process.env.BAE_LP_TICKETING_URL || config.ticketingUrl;
 
-config.searchUrl = ''
+config.searchUrl = 'http://localhost:4200'
 config.searchUrl = process.env.BAE_LP_SEARCH_URL || config.searchUrl;
