@@ -5,7 +5,7 @@ services:
         ports:
             - 27017:27017
         networks:
-            main:
+            dome:
         volumes:
             - ./proxy-data:/data/db
 
@@ -18,7 +18,7 @@ services:
         ports:
             - 8004:8004
         networks:
-            main:
+            dome:
                 aliases:
                     - proxy.docker
         environment:
@@ -30,9 +30,14 @@ services:
             - BAE_LP_SIOP_VERIFIER_JWKS_PATH=/.well-known/jwks
             - BAE_LP_SIOP_CALLBACK_PATH=http://proxy.docker:8004/auth/vc/callback
             - BAE_LP_SIOP_ALLOWED_ROLES=seller,customer
+            - BAE_LP_DOME_TRUST=https://dome-certification.dome-marketplace-sbx.org
+            - BAE_LP_KNOWLEDGE_BASE_URL=https://knowledgebase.dome-marketplace-sbx.org
+            - BAE_LP_DOME_ABOUT=https://dome-marketplace.eu/about
+            - BAE_LP_DOME_REGISTER=https://dome-marketplace.github.io/onboarding
+            - BAE_LP_DOME_PUBLISH=https://knowledgebase.dome-marketplace.org/shelves/company-onboarding-process
         volumes:
             - ../:/business-ecosystem-logic-proxy
 
 networks:
-    main:
+    dome:
         external: true
